@@ -1,0 +1,23 @@
+{
+  "name": "m96dev",
+  "version": "1.0.0",
+  "description": "各レポジトリの TOPフォルダー的なもの\r ```\r /m96dev\r   +- /autoJob\r   +- /hogeFolder ..\r   +- /etc ..\r ```\r - adfa\r  - dfdfdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m96dev/m96dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m96dev/m96dev/issues"
+  },
+  "homepage": "https://github.com/m96dev/m96dev#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
