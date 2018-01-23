@@ -9,12 +9,16 @@ http://m96.eek.jp/
   +- /hogeFolder ..
   +- /etc Folder ..
 ```
+---
 
 ### local development | ローカル確認用
 #### install , express web server
 `npm i`
 #### start web server
 `node srv`
+
+---
+
 - [x] check deploy
 - [ ] dfdfdf
 
