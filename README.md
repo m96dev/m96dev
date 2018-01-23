@@ -15,8 +15,8 @@ http://m96.eek.jp/
 `npm i`
 #### start web server
 `node srv`
-- adfa
-- dfdfdf
+- [x] check deploy
+- [ ] dfdfdf
 
 - [x] sdfasdf
 - [ ] sdfasdf
