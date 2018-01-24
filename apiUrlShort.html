@@ -118,7 +118,6 @@
       });
       favicon.badge(badge);
       $('#m96dev').text('m' + badge + 'dev');
-      $('#m96dev').fadeOut(1300,function(){$(this).fadeIn(1300)});
       badge += 1;
 
 
@@ -163,9 +162,42 @@
     }
   </script>
 
+
+  <!-- Google APIs Client -->
+  <script src="https://apis.google.com/js/api.js"></script>
+  
+  <script>
+    var key = "AIzaSyB-bGjK9UsObQEgSm_qi8aUC7IhoGbdEBE";
+
+    function shorten(url) {
+
+      return new Promise((resolve, reject) => {
+        gapi.load('client', _ => {
+          gapi.client.init({
+            'apiKey': key,
+            'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/urlshortener/v1/rest'],
+          })
+            .then(_ => gapi.client.urlshortener.url.insert({
+              longUrl: url
+            }))
+            .then(resolve, reject)
+        });
+      });
+    }
+
+    // 短縮URLを取得する
+    shorten('http://www.eje-c.com')
+      .then(function (response) {
+        // response.result.id に短縮URLが入っている
+        var shortUrl = response.result.id;
+        // 画面に表示
+        document.getElementById('shortUrlOutput').innerHTML = shortUrl;
+      });
+  </script>
 </head>
 
 <body>
+    <div id="shortUrlOutput"></div>
   <!-- Content -->
   <div class="container">
     <!-- <div id="markdown_content" src="replaceThis"> </div> -->
