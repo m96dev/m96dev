@@ -6,7 +6,8 @@ http://m96.eek.jp/
 ```
 /m96dev
   +- /autoJob
-  +- /hogeFolder ..
+  +      +- /dlAllFiles
+  +      +- /dlFiles
   +- /etc Folder ..
 ```
 ---
