@@ -27,18 +27,21 @@
   <!-- favicon -->
   <script type="text/javascript" src="http://lab.ejci.net/favico.js/favico.min.js"></script>
   <!-- <script type="text/javascript" src="https://kemar.github.io/jquery.countdown/jquery.countdown.js"></script> -->
-<style>
-  @import url(https://fonts.googleapis.com/earlyaccess/mplus1p.css);
-  /* @import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css); */
-  body {
-    background: #f7f4f4;
-    font-weight:500;
-    /* font-family: "Sawarabi Gothic";  */
-    font-family: "Mplus 1p";
-    /* font-family: 'Rounded Mplus 1c'; */
-    color: #080808;
-  }
-</style>
+  <style>
+    /* webfont */
+
+    @import url(https://fonts.googleapis.com/earlyaccess/mplus1p.css);
+    /* @import url(https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css); */
+
+    body {
+      background: #f7f4f4;
+      font-weight: 500;
+      /* font-family: "Sawarabi Gothic";  */
+      font-family: "Mplus 1p";
+      /* font-family: 'Rounded Mplus 1c'; */
+      color: #080808;
+    }
+  </style>
 
 
   <script>
@@ -83,14 +86,44 @@
       // });
 
       var urlOrPath1 = './.gitignore';
-    var urlOrPath1 = './index.css';
-    var target1 = $("#gitignore");
-    loadAndReplace(target1, urlOrPath);
+      var urlOrPath1 = './index.css';
+      var target1 = $("#gitignore");
+      loadAndReplace(target1, urlOrPath);
 
     });
 
 
     function loadAndReplace(targetarg, urlarg) {
+      var renderer = new marked.Renderer();
+      // // renderer.list = function (body, ordered) {
+      // //   var type = ordered ? 'ol' : 'ul';
+      // //   return '<' + type + ' class="list-group">' + body + '</' + type + '>';
+      // // };
+      // // renderer.listitem = function (text) {
+      // //   return '<li class="list-group-item">' + text + '</li>';
+      // // };
+
+      renderer.listitem = function(text) {
+        if (/^\s*\[[x ]\]\s*/.test(text)) {
+        text = text
+          .replace(/^\s*\[ \]\s*/, '<li class="list-group-item-danger"><label><input type="checkbox" >')
+          .replace(/^\s*\[x\]\s*/, '<li class="list-group-item-info"><label><input type="checkbox" checked="checked" disabled>');
+            return text + '</label></li>';
+          } else {
+            return '<ul class="list-group">' + text + '</ul>';
+          }
+      };
+      marked.setOptions({
+        renderer: renderer,
+        gfm: true,
+        tables: true,
+        breaks: true,
+        pedantic: false,
+        sanitize: false,
+        smartLists: false,
+        smartypants: false
+      });
+
       // var target = $("#markdown_content");
       $.ajax({
         // url: target[0].attributes["src"].value,
@@ -98,6 +131,11 @@
       }).success(function (data) {
         var oneline = data.split('\n');
         $('title').html(oneline[0]); // replace title 1st line from file
+        // 変換後のHtmlをhtmlに格納しておきます
+        data = marked(data);
+        // ここで[x]を選択済みのチェックボックスに[ ]を未選択のチェックボックスに変換
+        // data = data.replace(/\[x\]/gi, '<input type="checkbox" checked="checked">');
+        // data = data.replace(/\[ \]/gi, '<input type="checkbox" >');
         targetarg.append(marked(data));
       }).error(function (data) {
         targetarg.append("This content failed to load.");
@@ -118,7 +156,9 @@
       });
       favicon.badge(badge);
       $('#m96dev').text('m' + badge + 'dev');
-      $('#m96dev').fadeOut(1300,function(){$(this).fadeIn(1300)});
+      $('#m96dev').fadeOut(1300, function () {
+        $(this).fadeIn(1300)
+      });
       badge += 1;
 
 
