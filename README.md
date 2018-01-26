@@ -64,13 +64,15 @@ tar xvJf hogehoge.tar.xz
 - [x] check deploy m96dev
 - [x] check all domain disk usage
 - [ ] compress backup all domain
+- [ ] active access log sakura domain
+- [ ] active access log gcloud domain
 
 
 
 [Qiita](http://qiita.com "Qiita")
 [index](./index.html "index")
 #### google api
-[index](./apiUrlShort.html "api urlshortener")
+[api test urlshortener ](./apiUrlShort.html "api urlshortener")
 
 ---
 ~~~~
