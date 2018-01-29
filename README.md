@@ -8,6 +8,9 @@ http://m96.eek.jp/
   |-- /autoJob
   |    |-- /dlAllFiles
   |    |-- /dlFiles
+  |
+  |-- /crawl
+  |-- 
   |-- etc Folder ..
 ```
 ---
@@ -63,9 +66,10 @@ tar xvJf hogehoge.tar.xz
 ### infra
 - [x] check deploy m96dev
 - [x] check all domain disk usage
-- [ ] compress backup all domain
-- [ ] active access log sakura domain
-- [ ] active access log gcloud domain
+- [ ] compress backup all domain [diskUsage](#du)
+- active access log 
+ - [x] sakura domain
+ - [ ] gcloud domain
 
 
 
@@ -73,6 +77,7 @@ tar xvJf hogehoge.tar.xz
 [index](./index.html "index")
 #### google api
 [api test urlshortener ](./apiUrlShort.html "api urlshortener")
+[markdown converter ](./MdConverter.html "alt")
 
 ---
 ~~~~

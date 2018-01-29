@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://tools.thinkingsalad.com/md-converter/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Markdown Converter</title>
+  <meta name="description" content="Convert a lightweight markup languages to others.">
+  <meta property="og:title" content="Markdown Converter">
+
+  <link rel="stylesheet" href="./Markdown Converter_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./Markdown Converter_files/font-awesome.min.css">
+
+  <!-- <link href="./Markdown Converter_files/css" rel="stylesheet">
+  <link rel="stylesheet" href="./Markdown Converter_files/style.css"> -->
+
+  <style id="holderjs-style" type="text/css"></style>
+  <link rel="preload" href="./Markdown Converter_files/integrator.js" as="script">
+  <!-- <script src="./Markdown Converter_files/ca-pub-1711493402429966.js"></script> -->
+  <script type="text/javascript" src="./Markdown Converter_files/integrator.js"></script>
+  <!-- <link rel="preload" href="./Markdown Converter_files/integrator(1).js" as="script"> -->
+  <!-- <script type="text/javascript" src="./Markdown Converter_files/integrator(1).js"></script> -->
+  <script type="text/javascript" charset="utf-8" async="" src="./Markdown Converter_files/moment.189c3723afcd0d91c33b2a05c73be7f2.js"></script>
+</head>
+
+<body class="cf __plain_text_READY__">
+  <main>
+    <h1>
+      <img src="./Markdown Converter_files/logo.png" alt="Markdown Converter Logo">
+      <br> Markdown Converter β
+      <span>by assialiholic</span>
+    </h1>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <textarea name="inputArea" id="inputArea" cols="30" rows="10" placeholder="# Heading 1
+## Heading 2
+
+*This text will be italic*
+**This text will be bold**
+
+* List item 1
+    * List item 2
+        "></textarea>
+          </td>
+          <td class="td_btn">
+            <h2>From</h2>
+            <div class="labels">
+              <ul>
+                <li>
+                  <label class="radio markdown" for="from_markdown">
+                    <input class="js_fromBtn" type="radio" name="from" id="from_markdown" value="markdown" checked="">Markdown</label>
+                </li>
+                <li>
+                  <label class="radio backlog" for="from_backlog">
+                    <input class="js_fromBtn" type="radio" name="from" id="from_backlog" value="backlog">Backlog</label>
+                </li>
+                <li>
+                  <label class="radio wiki" for="from_wiki">
+                    <input class="js_fromBtn" type="radio" name="from" id="from_wiki" value="wiki">Wiki</label>
+                </li>
+              </ul>
+            </div>
+            <h2>To</h2>
+            <div class="labels">
+              <ul>
+                <li>
+                  <label class="radio radio_to markdown is_disabled" for="to_markdown">
+                    <input class="js_toBtn" type="radio" name="to" id="to_markdown" value="markdown">Markdown</label>
+                </li>
+                <li>
+                  <label class="radio radio_to backlog" for="to_backlog">
+                    <input class="js_toBtn" type="radio" name="to" id="to_backlog" value="backlog" checked="">Backlog</label>
+                </li>
+                <li>
+                  <label class="radio radio_to wiki" for="to_wiki">
+                    <input class="js_toBtn" type="radio" name="to" id="to_wiki" value="wiki">Wiki</label>
+                </li>
+              </ul>
+            </div>
+            <button class="js_convertBtn convertBtn">Convert</button>
+          </td>
+          <td>
+            <textarea name="outputArea" id="outputArea" cols="30" rows="10" placeholder="* Heading 1
+** Heading 2
+
+&#39;&#39;&#39;This text will be italic&#39;&#39;&#39;
+&#39;&#39;This text will be bold&#39;&#39;
+
+- List item 1
+-- List item 2
+        "></textarea>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Supported Syntax</h2>
+    <table class="syntaxTable">
+      <tbody>
+        <tr>
+          <th>&nbsp;</th>
+          <th>Heading</th>
+          <th>Bold</th>
+          <th>Italic</th>
+          <th>Strike</th>
+          <th>Image</th>
+          <th>Link</th>
+          <th>List</th>
+          <th>Num List</th>
+          <th>Quote</th>
+          <th>Inline Code</th>
+          <th>Code Block</th>
+          <th>Horizontal Line</th>
+        </tr>
+        <tr>
+          <th class="syntaxTable_serviceName markdown">MD</th>
+          <td>
+            # 1 to 6
+          </td>
+          <td>
+            ** Bold **
+          </td>
+          <td>
+            * Italic *
+          </td>
+          <td>
+            ~~ Strike ~~
+          </td>
+          <td>
+            ![Alt](URL)
+          </td>
+          <td>
+            [Text](URL)
+          </td>
+          <td>
+            * List 1
+            <br> 　* List 1-1
+          </td>
+          <td>
+            1. Num List 1
+            <br> 　1. Num List 1-1
+          </td>
+          <td>
+            &gt; Quote
+          </td>
+          <td>
+            `Inline Code`
+          </td>
+          <td>
+            ```
+            <br> Code Block
+            <br> ```
+          </td>
+          <td>
+            *** or * * *
+            <br> --- or - - -
+            <br> ___ or _ _ _
+          </td>
+        </tr>
+        <tr>
+          <th class="syntaxTable_serviceName backlog">BL</th>
+          <td>
+            * 1 to 6
+          </td>
+          <td>
+            '' Bold ''
+          </td>
+          <td>
+            ''' Italic '''
+          </td>
+          <td>
+            %% Strike %%
+          </td>
+          <td>
+            #thumbnail(URL)
+            <br> #image(URL)
+          </td>
+          <td>
+            [[Text:URL]]
+            <br> [[Text&gt;URL]]
+          </td>
+          <td>
+            - List 1
+            <br> -- List 1-1
+          </td>
+          <td>
+            + Num List 1
+            <br> ++ Num List 1-1
+          </td>
+          <td>
+            &gt; Quote
+            <br> {quote}Quote{/quote}
+          </td>
+          <td>
+            {code}Inline Code{/code}
+          </td>
+          <td>
+            {code}
+            <br> Code Block
+            <br> {/code}
+          </td>
+          <td>
+            none
+          </td>
+        </tr>
+        <tr>
+          <th class="syntaxTable_serviceName wiki">WK</th>
+          <td>
+            = 1 to 6 =
+          </td>
+          <td>
+            ''' Bold '''
+          </td>
+          <td>
+            '' Italic ''
+          </td>
+          <td>
+            &lt;del&gt;Strike&lt;/del&gt;
+          </td>
+          <td>
+            [[file:URL]]
+          </td>
+          <td>[URL Text]</td>
+          <td>
+            * List 1
+            <br> ** List 1-1
+          </td>
+          <td>
+            # List 1
+            <br> ## List 1-1
+          </td>
+          <td>
+            &lt;blockquote&gt;
+            <br> Quote
+            <br> &lt;/blockquote&gt;
+          </td>
+          <td>
+            &lt;pre&gt;Inline Code&lt;/pre&gt;
+          </td>
+          <td>
+            &lt;pre&gt;
+            <br> Code Block
+            <br> &lt;/pre&gt;
+          </td>
+          <td>
+            ----
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="snsBtns">
+      <ul>
+        <li class="btn_fb">
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tools.thinkingsalad.com/md-converter/">
+            <i class="fa fa-facebook-official"></i>
+            <span>Share me!</span>
+          </a>
+        </li>
+        <li class="btn_hiwhihhihii">
+          <a target="_blank" href="https://twitter.com/share?url=http://tools.thinkingsalad.com/md-converter/&amp;text=Markdown%20Converter&amp;via=assialiholic">
+            <i class="fa fa-twitter"></i>
+            <span>Tweet me!</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script src="./Markdown Converter_files/jquery.min.js"></script>
+    <script src="./Markdown Converter_files/script.js"></script>
+
+<!--
+// TODO: コードブロック内は変換されないでほしい。w
+// TODO: > http〜始まるのは変換しないとかw
+-->
+
+    <!-- <iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Markdown Converter_files/widget_iframe.83d5793f6ebbe2046330abda6016ae93.html" style="display: none;"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Markdown Converter_files/saved_resource(4).html"></iframe></body></html> -->
