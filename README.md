@@ -1,6 +1,6 @@
 # m96dev
 http://m96.eek.jp/
-
+ [countdown #remain](#remain)
 ### root folder 
 各レポジトリの TOPフォルダー的なもの
 ```
@@ -66,7 +66,7 @@ tar xvJf hogehoge.tar.xz
 ### infra
 - [x] check deploy m96dev
 - [x] check all domain disk usage
-- [ ] compress backup all domain [diskUsage](#du)
+- [ ] compress backup all domain >> [diskUsage](#du)
 - active access log 
  - [x] sakura domain
  - [ ] gcloud domain
@@ -82,4 +82,3 @@ tar xvJf hogehoge.tar.xz
 ---
 
 #### remain
-
