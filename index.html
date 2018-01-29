@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 
   <title>Markdown renderer</title>
   <meta name="description" content="Markdown renderer">
@@ -26,7 +27,24 @@
 
   <!-- favicon -->
   <script type="text/javascript" src="http://lab.ejci.net/favico.js/favico.min.js"></script>
-  <script type="text/javascript" src="./markdM96.js"></script>
+
+  <script type="text/javascript" src="./m96markd.js"></script>
+  <script type="text/javascript" src="./m96timerFavicon.js"></script>
+  <script>
+    // markd.js setting
+    $(document).ready(function () {
+      var urlOrPath = './README.md';
+      var targetMarkd = '#contents';
+      loadAndReplace(targetMarkd, urlOrPath);
+    });
+
+    //favicon badge start num 
+    var badge = 88;
+    //countdown   | targetdate   | target tag
+    CountDownTimer('02/01/2018', 'countdown');
+    CountDownTimer('03/01/2018', 'newcountdown');
+  </script>
+
   <!-- <script type="text/javascript" src="https://kemar.github.io/jquery.countdown/jquery.countdown.js"></script> -->
   <style>
     /* webfont */
@@ -50,7 +68,7 @@
   <!-- Content -->
   <div class="container">
     <!-- <div id="markdown_content" src="replaceThis"> </div> -->
-    <div id="gitignore" src="replace"> </div>
+    <div id="contents" src="replace"> </div>
   </div>
 
   <hr>
