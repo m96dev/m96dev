@@ -1,5 +1,8 @@
 ガラケー計測やメール開封に使えるヒットビルダーの使い方    
 =====================================
+上記手順にて　Ga-dev-tool で設定後
+`検証サンプル : 擬似的にJsfiddleへ設定利用`
+https://jsfiddle.net/shigetak/8qasygpy/
 
 
 ![taggenerator](http://www.kagua.biz/wp-content/uploads/2015/08/taggenerator2.jpg)
