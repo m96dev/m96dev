@@ -1,7 +1,9 @@
 cred2.json
+# folders do not add
 autoJob
 node_modules
-crawl/
+crawl
+keystoneJS
 
 ### FLLOWING GITHUB DEFAULT IGNORE LIST ###
 # Windows image file caches
