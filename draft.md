@@ -1,7 +1,10 @@
+# draft md
+
 [ES6 クラス](https://html5experts.jp/takazudo/17355/)
 
-#### ES6 class
-```
+## ES6 class
+
+```md
 |            old             |         ES6            |
 | :------------------------- | :--------------------- |
 | Cat.prototype = {          | class Cat {            |
@@ -11,9 +14,8 @@
 
 ```
 
-
 ```js
-/* Cat雛形の作成 */                               
+/* Cat雛形の作成 */
 function Cat(name) {
   this.setName(name);
 };
@@ -57,4 +59,3 @@ var cat2 = new Cat('コタロー');
 cat1.walk(); // タマが歩いています
 cat2.walk(); // コタローが歩いています
 ```
-

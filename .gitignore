@@ -4,6 +4,8 @@ autoJob
 node_modules
 crawl
 keystoneJS
+mifort-timesheet
+keyCms
 
 ### FLLOWING GITHUB DEFAULT IGNORE LIST ###
 # Windows image file caches
