@@ -1,7 +1,7 @@
-# m96dev テスト
+# m96dev test
 http://m96.eek.jp/
  [countdown #remain](#remain)
-### root folder テスト
+### root folder test
 各レポジトリの TOPフォルダー的なもの
 ```
 /m96dev
