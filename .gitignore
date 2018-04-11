@@ -1,11 +1,15 @@
 cred2.json
 # folders do not add
+.history
 autoJob
 node_modules
 crawl
 keystoneJS
+keystoneJS2
 mifort-timesheet
 keyCms
+lcc
+keyDemo
 
 ### FLLOWING GITHUB DEFAULT IGNORE LIST ###
 # Windows image file caches
