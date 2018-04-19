@@ -1,0 +1,12 @@
+{
+  "buttons":[
+    {
+      "name" : "Test Dash Button",
+      "address": "b4:7c:9c:96:d2:c3",
+      "url": "https://hooks.slack.com/services/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",
+      "method": "POST",
+      "json": true,
+      "body": {"text":"外の扉のボタンが押されましたよ! @here"}
+    }
+  ]
+}
